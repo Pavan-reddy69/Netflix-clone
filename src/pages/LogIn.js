@@ -25,8 +25,8 @@ const Login = () => {
         </div>
         <button class="login__sign-in" type="button" onClick={handleLogin}>Sign In</button>
         <div class="login__secondary-cta">
-          <a class="login__secondary-cta__text" href="#">Remember me</a>
-          <a class="login__secondary-cta__text login__secondary-cta__text--need-help" href="#">Need help?</a>
+          <a class="login__secondary-cta__text" >Remember me</a>
+          <a class="login__secondary-cta__text login__secondary-cta__text--need-help" >Need help?</a>
         </div>
       </div>
     </div>
