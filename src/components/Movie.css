@@ -1,0 +1,44 @@
+.movie-carousel {
+  margin-top: -60px;
+}
+
+
+.movie-carousel .carousel-item {
+  height: 550px;
+  transition: 0.1s ease-in-out;
+
+}
+
+.movie-carousel .carousel-item img {
+  height: 100%;
+  /* Ensure the image fills the entire carousel item */
+}
+
+h1 {
+  color: white;
+  align-items: center;
+}
+
+.movie-carousel .carousel-caption h4 {
+  color: #fdfdfd;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.play {
+  position: relative;
+  right: 70px;
+}
+
+.carousel-caption-left{
+  left:20px;
+}
+.carousel-caption-left h1,
+.carousel-caption-left p{
+  text-align: left;
+  margin-left: 15px;
+}
+.carousel-caption-left p{
+  font-size: large;
+  font-weight: 500;
+}

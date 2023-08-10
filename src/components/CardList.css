@@ -1,0 +1,171 @@
+.card-list-container {
+  display: flex;
+  height: 340px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  overflow-x: scroll; /* Prevent horizontal scrolling */
+  position: relative;
+  z-index: 0;
+}
+
+.card-list-container.open-modal {
+  overflow: hidden; /* Disable scrolling when the modal is open */
+}
+
+.card-list-container.open-modal .card-list {
+  pointer-events: none; /* Allow clicks on the background through the cards */
+}
+
+.card-list-container.open-modal .custom-modal {
+  pointer-events: auto; /* Disable clicks on the background when the modal is open */
+}
+
+.card-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-list {
+  display: flex;
+  height: fit-content;
+  transition: transform 0.7s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background-color: #141414;
+  height: fit-content;
+  width: 200px;
+  padding: 0px;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.386);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+
+.left-button,
+.right-button {
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  z-index: 1;
+}
+
+.left-button {
+  left: 16px;
+}
+
+.right-button {
+  right: 16px;
+}
+
+.custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1; /* Set a higher z-index value to shadow the entire card-list-container */
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+.custom-modal.open {
+  visibility: visible; /* Show the modal */
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  top: 50px;
+  width: 70%;
+  max-width: 800px;
+  max-height: calc(100vh - 40px); /* Subtract any additional margins or paddings */
+  margin: auto;
+  overflow:visible;
+  background-color: #060000;
+  border-radius: 8px;
+  padding: 16px;
+  color: #fff;
+}
+
+.backdrop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Prevent scrolling on the home page when the modal is open */
+body.modal-open {
+  overflow: hidden;
+}
