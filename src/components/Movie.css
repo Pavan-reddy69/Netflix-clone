@@ -27,7 +27,13 @@ h1 {
 
 .play {
   position: relative;
-  right: 70px;
+  margin-left: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.play1 {
+  position: relative;
+  margin-right: 130px;
   border-radius: 8px;
 }
 

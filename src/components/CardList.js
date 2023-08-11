@@ -34,7 +34,7 @@ const CardList = ({ fetchUrl }) => {
     <div className="card-list-container">
       <div className="card-list">
         {loading ? (
-          Array.from({ length: 6 }).map((_, index) => (
+          Array.from({ length: 9}).map((_, index) => (
             <SkeletonCard key={index} />
           ))
         ) : (
