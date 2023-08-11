@@ -35,9 +35,11 @@ const MovieCarousel = () => {
               />
               <Carousel.Caption className='carousel-caption-left'>
                 <h1>{movie.original_title || movie.original_name}</h1>
-                <button className='play' style={{ border: "0", padding: "8px",  width: "5rem", backgroundColor: "rgba(255, 255, 255, 0.6)" }}  onClick={() => handleCardClick(movie)}><strong>PLAY</strong></button>
+                <button className='play' style={{ border: "0", padding: "8px", width: "5rem", backgroundColor: "rgba(255, 255, 255, 0.6)" }} onClick={() => handleCardClick(movie)}><strong>PLAY</strong></button>
                 <button className='play1' style={{ border: "0", padding: "8px", width: "5rem", backgroundColor: "rgba(255, 255, 255, 0.6)" }} onClick={() => handleCardClick(movie)}><strong>INFO</strong></button>
-                <strong><small style={{ marginRight: "600px"}}><b>IMDB Rating : {movie?.vote_average}</b></small></strong>
+                <div className='imdb-rating'>
+                  <strong>IMDB Rating:</strong> {movie?.vote_average}
+                </div>
                 <p>{movie?.overview}</p>
               </Carousel.Caption>
             </Carousel.Item>
