@@ -22,6 +22,7 @@
   }
   
   .card:hover .overlay {
+    
     opacity: 1; 
   }
   
@@ -45,7 +46,7 @@
     color: white;
  }
 
- .card.hovered {
+ .card:hover {
     transform: scale(1.1); 
     z-index: 1; 
   }

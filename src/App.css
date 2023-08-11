@@ -1,52 +1,64 @@
 header {
-  width: 80%;
-  margin-left: 100px;
-  height:60px;
-  background-color: #08151fc3;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(8, 21, 31, 0.724); /* Set initial opacity to 0 */
   text-align: center;
   border: 0;
-  border-radius: 25px !important;
-  position: sticky; /* Set the header position to sticky */
+  border-radius: 0px;
+  position: sticky;
   top: 0;
-  z-index: 999; 
-
+  z-index: 999;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-header nav {
+header.nav-scrolled {
+  background-color: rgba(8, 21, 31, 0.9); 
+}
+nav {
   position: absolute;
   bottom: 0;
   height: 60px;
-  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
   border-radius: 0;
   border: none;
   width: 100%;
-  
 }
 
-header nav a {
+nav a {
   color: #fff;
-  display: inline-block;
   padding: 10px 20px;
   font-size: larger;
   font-weight: 400;
-  line-height: 1;
   text-decoration: none;
 }
 
-header nav a:hover {
+nav a:hover {
   color: rgb(254, 15, 31);
-  box-shadow: 0 1 0 0px #fff;
-}
-
-.image1{
-  height: 60px;
-  margin-top: -5px;
-  margin-left: 0;
-  padding-right: 90px;
-  border-radius: 18px;
   
 }
 
-.log{
-  padding-left: 300px;
+.image1 {
+  height: 70px;
+  border-radius: 0px;
+}
+
+.log {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  margin-right: 5px;
+}
+.user-greeting{
+  color: #fff;
+  display: flex;
+  position: relative;
+  margin-top: 18px;
+  font-size: large;
+  align-items:center;
+  margin-left: 250px;
 }

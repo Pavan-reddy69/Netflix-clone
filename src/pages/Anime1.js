@@ -28,7 +28,7 @@ const Anime = () => {
     const [data, setData] = useState([]);
     const navigation = useNavigate();
     useEffect(() => {
-        fetch('https://api.themoviedb.org/3/discover/movie?api_key=956bc59cec62b55741365cda6ad66d4a&with_genres=99')
+        fetch('https://api.themoviedb.org/3/discover/movie?api_key=956bc59cec62b55741365cda6ad66d4a&with_genres=16')
             .then((response) => response.json())
             .then((data) => setData(data.results))
             .catch((error) => console.error('Error fetching data:', error));

@@ -18,10 +18,7 @@ const Home = () => {
         <div className="card-list-section">
           <h3>Trending:</h3>
           <CardList fetchUrl={trendingUrl} />
-        </div> <div className="card-list-section">
-          <h3>TV Series</h3>
-          <CardList fetchUrl={tvSeriesUrl} />
-        </div>
+        </div> 
         <div className="card-list-section">
           <h3>Netflix Originals:</h3>
           <CardList fetchUrl={NetflixOriginals} />
@@ -34,7 +31,10 @@ const Home = () => {
           <h3>Anime</h3>
           <CardList fetchUrl={animeUrl} />
         </div>
-       
+       <div className="card-list-section">
+          <h3>TV Series</h3>
+          <CardList fetchUrl={tvSeriesUrl} />
+        </div>
       </div>
 
     </div>

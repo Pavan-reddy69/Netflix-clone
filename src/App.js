@@ -8,11 +8,12 @@ import Anime from './pages/Anime1';
 import Series from './pages/Series';
 import Login from './pages/LogIn';
 import MoviePlayer from './components/MovieDetails';
+
 function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-
+  const userName = localStorage.getItem('userName');
   if (location.pathname === '/') {
     return null;
   }
@@ -23,19 +24,31 @@ function Navbar() {
   };
 
   return (
-    <header>
-      <nav>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF6-cXZHF9zeyx0mlcYdXCGm9WJs4dDDZclA&usqp=CAU" alt={"logo"} className='image1' />
-        <Link to="/home">Home</Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/anime">Anime</Link>
-        <Link to="/series">TV Series</Link>
-        <Link to="/" className="log" onClick={handleLogout}>
-              <FiLogOut className="logout-icon" />
-              LogOut
-            </Link>
-      </nav>
-    </header>
+<header>
+  <nav>
+  <Link to="/home">
+          <img
+            src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=700&h=456"
+            alt="logo"
+            className="image1"
+          />
+          </Link>
+    <div class="nav-links">
+      <Link to="/home">Home</Link>
+      <Link to="/movies">Movies</Link>
+      <Link to="/anime">Anime</Link>
+      <Link to="/series">TV Series</Link>
+    </div>
+    <div class="user-greeting">
+          {userName && <p>Welcome, {userName}!</p>}
+        </div>
+    <Link to="/" class="log" onClick={handleLogout}>
+      <FiLogOut class="logout-icon" />
+      LogOut
+    </Link>
+  </nav>
+</header>
+
   );
 }
 
@@ -51,7 +64,9 @@ function App() {
           <Route path="/anime" element={<Anime />} />
           <Route path="/series" element={<Series />} />
           <Route path="/movie/:id" element={<MoviePlayer />} />
-
+ 
+          
+       
         </Routes>
       </div>
     </Router>
