@@ -28,6 +28,7 @@ h1 {
 .play {
   position: relative;
   right: 70px;
+  border-radius: 8px;
 }
 
 .carousel-caption-left{
