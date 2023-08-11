@@ -8,7 +8,7 @@ import Anime from './pages/Anime1';
 import Series from './pages/Series';
 import Login from './pages/LogIn';
 import MoviePlayer from './components/MovieDetails';
-
+import SearchBar from './components/SearchBar';
 function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,8 +39,11 @@ function Navbar() {
       <Link to="/anime">Anime</Link>
       <Link to="/series">TV Series</Link>
     </div>
+    <div className='search'>
+      <SearchBar/>
+    </div>
     <div class="user-greeting">
-          {userName && <p>Welcome, {userName}!</p>}
+          {userName && <p>Welcome Back, {userName}!</p>}
         </div>
     <Link to="/" class="log" onClick={handleLogout}>
       <FiLogOut class="logout-icon" />
