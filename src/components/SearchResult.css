@@ -36,7 +36,7 @@
     background: #474747;
     }
     
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:480px) {
     .results-list{
     right:35px;
     width: 70%;

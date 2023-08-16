@@ -11,9 +11,7 @@ header {
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-header.nav-scrolled {
-  background-color: rgba(8, 21, 31, 0.9); 
-}
+
 nav {
   position: absolute;
   bottom: 0;
@@ -63,3 +61,83 @@ nav a:hover {
   margin-left: 30px;
 }
 
+
+
+@media (max-width: 900px) {
+  /* Adjusted header styles */
+  header {
+    height: 59px;
+    background-color: rgba(8, 21, 31, 0.63);
+    opacity: 1;
+    position: sticky;
+    
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+
+ 
+
+
+
+  nav a {
+    font-size: small;
+    margin: 0;
+    padding: 10px;
+  }
+
+
+  .log {
+    display: flex;
+    right: 100px;
+    position: relative;
+    font-size: medium;
+  }
+
+  .user-greeting {
+    display: none;
+  }
+
+
+  .image1 {
+    height: 40px;
+  }
+}
+@media (max-width: 703px){
+  .nav-links{
+    display: none;
+  }
+} 
+
+@media (max-width: 480px) {
+  /* Adjusted header styles */
+  header {
+    height: 50px;
+    background-color: rgba(8, 21, 31, 0.63);
+    opacity: 1;
+    position: sticky;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+
+  
+  .log{
+    font-size: medium;
+    margin-left: 160px;
+  }
+
+  .nav-links{
+   display: none;
+  }
+
+  .search{
+    left: 140px;
+  }
+  .user-greeting {
+    display: none;
+  }
+
+ 
+
+  .image1 {
+    
+    height: 40px;
+  }
+}

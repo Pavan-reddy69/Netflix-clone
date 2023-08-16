@@ -50,3 +50,59 @@
     background-color: white;
     color: black;
 }
+@media (max-width: 930px) {
+    .ban {
+        top: -60px;
+        position: relative;
+        height: 80vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        color: white;
+    }  
+    .ban_contents {
+        position: absolute;
+        bottom: 10px;
+        left: 5%;
+        max-width: 80%;
+    }
+    
+    .ban_title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .banner_description {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        
+    }
+}
+@media (max-width: 480px) {
+    .ban {
+        top: -60px;
+        position: relative;
+        height: 60vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        color: white;
+    }  
+    .ban_contents {
+        position: absolute;
+        bottom: 10px;
+        left: 5%;
+        max-width: 80%;
+    }
+    
+    .ban_title {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .banner_description {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        
+    }
+}

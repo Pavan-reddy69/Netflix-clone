@@ -27,30 +27,90 @@ h1 {
 
 .play {
   position: relative;
-  margin-left: 8px;
+  right: 40%;
   margin: 10px;
   border-radius: 8px;
 }
+
 .play1 {
   position: relative;
   margin-right: 82%;
   border-radius: 8px;
 }
-.imdb-rating{
+
+.imdb-rating {
   position: relative;
   margin-left: 20px;
   text-align: left;
 }
 
-.carousel-caption-left{
-  left:20px;
+.carousel-caption-left {
+  left: 20px;
 }
+
 .carousel-caption-left h1,
-.carousel-caption-left p{
+.carousel-caption-left p {
   text-align: left;
   margin-left: 15px;
 }
-.carousel-caption-left p{
+
+.carousel-caption-left p {
   font-size: large;
   font-weight: 500;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 898px) {
+  .movie-carousel .carousel-item {
+    height: 400px;
+    
+  }
+
+  .movie-carousel {
+    margin-top: 0px;
+  }
+
+  .overview {
+    display: none;
+    
+  }
+
+  .carousel-caption-left {
+    left: 30px;
+  }
+
+  .carousel-caption-left h1,
+  .carousel-caption-left p {
+    margin-left: 10px;
+  }
+
+  .play {
+    left: -200px;
+    margin-left: -5px;
+  }
+
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .movie-carousel .carousel-item {
+    height: 300px;
+   
+  }
+
+  .carousel-caption-left h1,
+  .carousel-caption-left p {
+    font-size: medium;
+  }
+
+  .play {
+    left: -60px;
+    
+    
+  }
+
+  .overview {
+    display: none;
+    /* Hide the overview on mobile screens as well */
+  }
 }
